@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>更新のお知らせ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="notice" aria-label="このサイトについて">
+    <details>
+      <summary>🛈️</summary>
+        <h2>SECURITY DEMO</h2>
+        <strong>セキュリティ学習用のサンプルです。</strong>
+        HP社および同社の公式サイトとは一切関係ありません。
+        攻撃や情報収集を目的としたサイトではありません。
+    </details>
+  </header>
+  <main>
+
+    <h1>このページは<br>更新中です。</h1>
+    <form id="notification-form" aria-describedby="form-note">
+      <label for="email">Eメールアドレス</label>
+      <div class="form-row">
+        <input id="email" type="email" placeholder="demo@example.com" autocomplete="off" spellcheck="false" required>
+        <button type="submit">更新通知をEメールで受け取る</button>
+      </div>
+    </form>
+
+    <div id="result" class="result" role="status" hidden>
+      <h2>このサイトは偽サイトの実演用サンプルです。</h2>
+      <p>登録は行われていません。入力内容は送信・保存されていません。</p>
+      <p>アドレスの見た目が似ていても、同じドメインとは限りません。リンク先を確認してから情報を入力しましょう。</p>
+      <details>
+        <summary>このデモの仕組み</summary>
+        <p>キリル文字の <code>һ</code>（U+04BB）と <code>р</code>（U+0440）を使った <code>һр.com</code> は、ラテン文字の <code>hp.com</code> とは異なるドメインです。見た目が似た文字で別のサイトと誤認させる手法を「ホモグラフ攻撃」と呼びます。</p>
+        <p>このページはその仕組みを示すための教材です。HP社のデザインやロゴは使用していません。</p>
+      </details>
+    </div>
+  </main>
+  <script>
+    const form = document.getElementById('notification-form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      result.hidden = false;
+    });
+  </script>
+</body>
+</html>
+
